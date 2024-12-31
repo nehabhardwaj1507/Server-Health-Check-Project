@@ -1,0 +1,35 @@
+Server health check for ip-172-31-30-43 at Tue Dec 31 19:58:53 UTC 2024
+Checking Disk Space: 
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       6.8G  1.9G  4.9G  29% /
+tmpfs           479M     0  479M   0% /dev/shm
+tmpfs           192M  888K  191M   1% /run
+tmpfs           5.0M     0  5.0M   0% /run/lock
+/dev/xvda16     881M   76M  744M  10% /boot
+/dev/xvda15     105M  6.1M   99M   6% /boot/efi
+tmpfs            96M   12K   96M   1% /run/user/1000
+Checking CPU usage: 
+%Cpu(s):(B[m[39;49m[1m  0.0 (B[m[39;49mus,(B[m[39;49m[1m  0.0 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 76.9 (B[m[39;49mid,(B[m[39;49m[1m  0.0 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m 23.1 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+Checking Memory status: 
+               total        used        free      shared  buff/cache   available
+Mem:           957Mi       318Mi       180Mi       904Ki       616Mi       639Mi
+Swap:             0B          0B          0B
+Service check for nginx: 
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/usr/lib/systemd/system/nginx.service; enabled; preset: enabled)
+     Active: active (running) since Tue 2024-12-31 19:26:28 UTC; 32min ago
+       Docs: man:nginx(8)
+    Process: 1425 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+    Process: 1427 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+   Main PID: 1428 (nginx)
+      Tasks: 2 (limit: 1130)
+     Memory: 1.7M (peak: 1.9M)
+        CPU: 11ms
+     CGroup: /system.slice/nginx.service
+             ├─1428 "nginx: master process /usr/sbin/nginx -g daemon on; master_process on;"
+             └─1430 "nginx: worker process"
+
+Dec 31 19:26:28 ip-172-31-30-43 systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+Dec 31 19:26:28 ip-172-31-30-43 systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+Uptime check: 
+ 19:58:53 up 42 min,  1 user,  load average: 0.00, 0.00, 0.00
